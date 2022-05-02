@@ -4,71 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hqdefault"
+    android:backgroundTint="#E2D8EC"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/letter"
         android:layout_width="287dp"
         android:layout_height="261dp"
         android:layout_marginStart="62dp"
         android:layout_marginTop="57dp"
         android:layout_marginEnd="62dp"
+        android:background="?attr/actionBarDivider"
         android:text="B"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/purple_700"
         android:textSize="164sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/nextletter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="36dp"
         android:text="Get New Letter"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/ans" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/grass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="220dp"
         android:text="GRASS"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/letter" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/root"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="52dp"
         android:text="ROOT"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/grass"
+        app:layout_constraintTop_toBottomOf="@+id/nextletter" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/sky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="220dp"
         android:text="SKY"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/root"
+        app:layout_constraintTop_toBottomOf="@+id/letter" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
         android:layout_marginTop="51dp"
         android:text="ANSWER"
+        android:textColor="@color/purple_700"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/letter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
