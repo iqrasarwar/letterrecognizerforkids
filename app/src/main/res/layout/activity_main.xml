@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hqdefault"
-    android:backgroundTint="#E2D8EC"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/letter"
-        android:layout_width="287dp"
-        android:layout_height="261dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="62dp"
         android:layout_marginTop="57dp"
         android:layout_marginEnd="62dp"
+        android:layout_marginBottom="51dp"
         android:background="?attr/actionBarDivider"
         android:text="B"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="164sp"
+        app:layout_constraintBottom_toTopOf="@+id/ans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,55 +30,61 @@
         android:id="@+id/nextletter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="45dp"
         android:text="Get New Letter"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/grass"
+        app:layout_constraintEnd_toEndOf="@+id/root"
         app:layout_constraintTop_toBottomOf="@+id/ans" />
 
     <Button
         android:id="@+id/grass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="31dp"
         android:text="GRASS"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sky"
+        app:layout_constraintEnd_toStartOf="@+id/root"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/letter" />
+        app:layout_constraintTop_toBottomOf="@+id/nextletter" />
 
     <Button
         android:id="@+id/root"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="31dp"
         android:text="ROOT"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/grass"
-        app:layout_constraintTop_toBottomOf="@+id/nextletter" />
+        app:layout_constraintBottom_toTopOf="@+id/sky"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grass" />
 
     <Button
         android:id="@+id/sky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginBottom="73dp"
         android:text="SKY"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/root"
-        app:layout_constraintTop_toBottomOf="@+id/letter" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grass"
+        app:layout_constraintTop_toBottomOf="@+id/grass" />
 
     <TextView
         android:id="@+id/ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="37dp"
         android:text="ANSWER"
         android:textColor="@color/purple_700"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nextletter"
+        app:layout_constraintEnd_toEndOf="@+id/letter"
+        app:layout_constraintStart_toStartOf="@+id/nextletter"
         app:layout_constraintTop_toBottomOf="@+id/letter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
